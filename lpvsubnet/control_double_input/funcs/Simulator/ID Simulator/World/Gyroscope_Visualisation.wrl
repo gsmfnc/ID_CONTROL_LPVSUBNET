@@ -1,0 +1,61 @@
+#VRML V2.0 utf8
+
+DEF Side_View Viewpoint {
+  description "Default"
+  position -300 400 700
+  orientation -0.700212 -0.700212 -0.139302 0.5536
+}
+DEF XY-Plane Viewpoint {
+  description "XY View"
+  position 0 90 700
+  orientation 0 1 0 0
+}
+DEF YZ-Plane Viewpoint {
+  description "YZ View"
+  position -750 80 0
+  orientation 0 1 0 -1.5708
+}
+DEF XZ-Plane Viewpoint {
+  description "XZ View"
+  position 0 -350 0
+  orientation 1 0 0 1.5708
+}
+DEF SG Transform {
+  translation -415 -700 -1079
+  center 415 790 1080
+  children DEF SG_Frame Inline {
+    url "Silver_gimbal.wrl" 
+  }
+}
+DEF RG Transform {
+  translation -52 0 -280
+  center 52.5 96.5 281
+  children DEF RG_Frame Inline {
+    url "Red_gimbal.wrl" 
+  }
+}
+DEF BG Transform {
+  rotation 1 0 0 1.5708
+  center 0 100 0
+  children DEF BG_Frame Inline {
+    url "Blue_gimbal.wrl" 
+  }
+}
+DEF Disk Transform {
+  translation 0 100 0
+  rotation 0 1 0 1.5708
+  center 0 0 6.35
+  children DEF Disk_Frame Inline {
+    url "Disk_gold.wrl" 
+  }
+}
+Background {
+  skyColor 0.6 0.8 1
+}
+DirectionalLight {
+}
+DirectionalLight {
+  intensity 0
+  color 0.6 0.8 1
+  ambientIntensity 1
+}
