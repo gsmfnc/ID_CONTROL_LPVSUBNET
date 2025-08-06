@@ -1,6 +1,6 @@
-# LPV_SysId
+# ID_CONTROL_LPVSUBNET
 
-Codes associated with ...
+Code associated with ...
 
 ## Required software
 
@@ -21,3 +21,18 @@ Identification Toolbox version: 9.14 (R2021a)
 https://gitlab.com/releases-c-verhoek/lpv-subnet
 1.  The code in 'autoencoders/' folders is based on
 http://dysco.imtlucca.it/masti/autoencoders/
+
+## Description
+
+1.  'autoencoders/': identification using autoencoders; see
+'gyroscope_main.py'.
+1.  'BLA/': identification using BLA; see 'main.m'.
+1.  'data/': folder containing data.
+1.  'lpvcore/': identification using LPVcore; see 'gyroscope_main.m'.
+1.  'lpvsubnet/identification': identification using LPVSUBNET;
+see 'gyroscope.py';
+use 'matrices.py' to export the LPVSUBNET to matlab
+(creates a matlab file matrices.m that should be moved to 'lpvsubnet/control').
+1.  'lpvsubnet/control': LPV controller design and simulation; see 'main.m'.
+1.  'lpvsubnet/control_double_input': LPV controller design and simulation with
+i_1 and i_2 as inputs; see 'main.m'. (NOT WORKING)

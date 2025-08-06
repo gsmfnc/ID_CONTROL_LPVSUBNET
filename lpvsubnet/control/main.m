@@ -4,8 +4,11 @@ clear
 addpath("./funcs")
 load_gyro
 
-load_self_sched = false;
-synthesize_flag = false;
+load_self_sched = false; % load LPVSUBNET self-scheduling estimates
+                         % NOTE: at the moment, externally-scheduled estimates
+                         % do not work
+synthesize_flag = false; % if false, it just loads previously synthesized
+                         % controller
 synthesis_main
 
 x0 = [0; 0; 0; 0; 50; 0; 0; 0];
