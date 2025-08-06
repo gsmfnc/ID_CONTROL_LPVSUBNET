@@ -37,7 +37,11 @@ clear exp_u exp_p exp_y
 
 %% LPVSUBNET results: bode diagram
 
-matrices
+if load_self_sched
+    matrices
+else
+    matrices_ext
+end
 
 [Ap, Bp, Cp, Dp] = get_model(As, Bs, Cs, Ds);
 encoder = {W0e, W1e, W2e, b0e, b1e, b2e, Ve, ce};

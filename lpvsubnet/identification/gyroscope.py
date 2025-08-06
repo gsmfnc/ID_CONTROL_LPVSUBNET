@@ -25,11 +25,11 @@ sys = LPV_single_encoder_mod(nx=5, Np=2, na=10, nb=10, feedthrough=True, \
             e_net_kwargs=dict(n_nodes_per_layer = 64, n_hidden_layers = 2), \
             p_net_kwargs=dict(n_nodes_per_layer = 64, n_hidden_layers = 2))
 sys.init_model(sys_data=train)
+sys.unique_code = "D5fiSA"
 sys.fit(train, train[-25000:], epochs = 1000, loss_kwargs=dict(nf=80, \
     loss_nf_cutoff=1), print_full_time_profile = True)
 sys.checkpoint_save_system('_best', 'results')
 
-sys.unique_code = "D5fiSA"
 sys.checkpoint_load_system("_best", "results")
 
 print("LPV single encoder, nx=5, Np=2, na=nb=10")
@@ -45,11 +45,11 @@ sys_m = LPV_multi_encoder_mod(nx=5, Np=2, na=10, nb=10, feedthrough=True, \
             e_net_kwargs=dict(n_nodes_per_layer = 64, n_hidden_layers = 2), \
             p_net_kwargs=dict(n_nodes_per_layer = 64, n_hidden_layers = 2))
 sys_m.init_model(sys_data=train)
+sys_m.unique_code = "wds1ew"
 sys_m.fit(train, train[-25000:], epochs = 1000, loss_kwargs=dict(nf=80, \
     loss_nf_cutoff=1), print_full_time_profile = True)
 sys_m.checkpoint_save_system('_best', 'results')
 
-sys_m.unique_code = "wds1ew"
 sys_m.checkpoint_load_system("_best", "results")
 
 print("LPV multi encoder, nx=5, Np=2, na=nb=10")
@@ -76,11 +76,11 @@ sys = LPV_single_encoder_mod_double_input(nx=5, Np=2, na=10, nb=10, \
             e_net_kwargs=dict(n_nodes_per_layer = 64, n_hidden_layers = 2), \
             p_net_kwargs=dict(n_nodes_per_layer = 64, n_hidden_layers = 2))
 sys.init_model(sys_data=train)
+sys.unique_code = "n31BRg"
 sys.fit(train, train[-25000:], epochs = 1000, loss_kwargs=dict(nf=80, \
     loss_nf_cutoff=1), print_full_time_profile = True)
 sys.checkpoint_save_system('_best', 'results')
 
-sys.unique_code = "n31BRg"
 sys.checkpoint_load_system("_best", "results")
 
 print("LPV single encoder, nx=5, Np=2, na=nb=10")

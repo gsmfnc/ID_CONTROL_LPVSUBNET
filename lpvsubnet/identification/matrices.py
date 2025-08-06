@@ -2,12 +2,20 @@ import deepSI
 import numpy as np
 from scipy.io import loadmat, savemat
 from modified_lpvsubnet import LPV_single_encoder_mod
+from modified_lpvsubnet import LPV_multi_encoder_mod
 
-sys = LPV_single_encoder_mod(nx=5, Np=2, na=10, nb=10, feedthrough=True, \
+#sys = LPV_single_encoder_mod(nx=5, Np=2, na=10, nb=10, feedthrough=True, \
+#            include_u_in_p=True, f_net_kwargs=dict(F=10), \
+#            e_net_kwargs=dict(n_nodes_per_layer = 64, n_hidden_layers = 2), \
+#            p_net_kwargs=dict(n_nodes_per_layer = 64, n_hidden_layers = 2))
+#sys.unique_code = "D5fiSA"
+#sys.checkpoint_load_system("_best", "results")
+
+sys = LPV_multi_encoder_mod(nx=5, Np=2, na=10, nb=10, feedthrough=True, \
             include_u_in_p=True, f_net_kwargs=dict(F=10), \
             e_net_kwargs=dict(n_nodes_per_layer = 64, n_hidden_layers = 2), \
             p_net_kwargs=dict(n_nodes_per_layer = 64, n_hidden_layers = 2))
-sys.unique_code = "D5fiSA"
+sys.unique_code = "wds1ew"
 sys.checkpoint_load_system("_best", "results")
 
 A = sys.fn.A

@@ -4,6 +4,7 @@ clear
 addpath("./funcs")
 load_gyro
 
+load_self_sched = false;
 synthesize_flag = false;
 synthesis_main
 
@@ -30,7 +31,8 @@ type = 1; % self-scheduling
 selfsched_gyro = sim(gyro_sim, tfin);
 
 %% save results
-save('results.mat', 'extsched_gyro', 'selfsched_gyro');
+save('results_self.mat', 'extsched_gyro', 'selfsched_gyro');
+% save('results_ext.mat', 'extsched_gyro', 'selfsched_gyro');
 
 %% plotting
 load results.mat

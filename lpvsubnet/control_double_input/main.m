@@ -10,7 +10,7 @@ synthesis_main
 x0 = [0; 0; 0; 0; 50; 0; 0; 0];
 
 type = 0; % external-scheduling
-type = 1; % self-scheduling
+% type = 1; % self-scheduling
 
 encoder_struct = convert_cellarray_to_struct(encoder);
 pnet_struct = convert_cellarray_to_struct(pnet);
